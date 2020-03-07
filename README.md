@@ -1,6 +1,6 @@
 # coronavirus-Heroku-tracker (API)
 
-> This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask.
+> This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈.
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Omaroid/Covid-19-API)
@@ -20,6 +20,33 @@ GET /
 { "latest": { ... }, "confirmed": { ... }, "deaths": { ... }, "recovered": { ... } }
 ```
 
+Getting just confirmed:
+
+```http
+GET /confirmed
+```
+```json
+{ "latest": 42767, "locations": [ ... ] }
+```
+
+Getting just deaths:
+
+```http
+GET /deaths
+```
+
+Getting just recoveries:
+
+```http
+GET /recovered
+```
+
+Getting just latest data:
+
+```http
+GET /latest
+```
+
 ## Data
 
 The data comes from the [2019 Novel Coronavirus (nCoV) Data Repository, provided
@@ -34,6 +61,7 @@ You will need the following things properly installed on your computer.
 
 * [Python 3](https://www.python.org/downloads/) (with pip)
 * [Flask](https://pypi.org/project/Flask/)
+* [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Installation
 
@@ -45,8 +73,6 @@ You will need the following things properly installed on your computer.
 
 * `python app.py`
 * Visit your app at [http://localhost:5000](http://localhost:5000).
-
-### Building
 
 ### Deploying
 
