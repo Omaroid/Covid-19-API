@@ -11,25 +11,25 @@ def index():
     return d
 
 @app.route('/confirmed')
-def index():
+def confirmed():
     with open('data.json') as f:
         d = json.load(f)
     return d['confirmed']
 
 @app.route('/deaths')
-def index():
+def deaths():
     with open('data.json') as f:
         d = json.load(f)
     return d['deaths']
 
 @app.route('/recovered')
-def index():
+def recovered():
     with open('data.json') as f:
         d = json.load(f)
     return d['recovered']
 
 @app.route('/latest')
-def index():
+def latest():
     with open('data.json') as f:
         d = json.load(f)
     return d['latest']
