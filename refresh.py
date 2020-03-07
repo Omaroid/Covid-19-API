@@ -122,7 +122,6 @@ for index, row in df_recovered.iterrows():
 
 json_data_final['recovered']['latest'] = tmp_latest_recovered
 
-
 with open('data.json', 'w') as f:
     json.dump(json_data_final, f)
     sys.stdout.flush()
