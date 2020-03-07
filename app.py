@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify
 import json
+import os
 
 app = Flask(__name__)
-
-with open('data.json') as f:
-    d = json.load(f)
 
 # A welcome message to test our server
 @app.route('/')
 def index():
+    with open('data.json') as f:
+        d = json.load(f)
     return d
 
 if __name__ == '__main__':
