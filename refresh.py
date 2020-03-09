@@ -128,7 +128,7 @@ json_data_final['latest'] = {}
 
 json_data_final['latest']['confirmed'] = tmp_latest_confirmed
 json_data_final['latest']['deaths'] = tmp_latest_deaths
-json_data_final['latest']['reconvered'] = tmp_latest_recovered
+json_data_final['latest']['recovered'] = tmp_latest_recovered
 
 with open('data.json', 'w') as f:
     json.dump(json_data_final, f)
