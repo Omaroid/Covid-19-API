@@ -6,26 +6,6 @@ import json
 import math
 import sys
 import os
-from git import Repo
-from dotenv import load_dotenv
-
-load_dotenv()
-LOGIN = os.getenv("login")
-PASSWORD = os.getenv("password")
-
-PATH_OF_GIT_REPO = ".git"  # make sure .git folder is properly configured
-COMMIT_MESSAGE = 'Update Data'
-
-def git_push():
-    try:
-        repo = Repo(PATH_OF_GIT_REPO)
-        repo.git.add(update=True)
-        repo.index.commit(COMMIT_MESSAGE)
-        origin = repo.remote(name='origin')
-        origin.push()
-    except Exception as e:
-        print(str(e))
-        print('Some error occured while pushing the code')    
 
 url_confirmed="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
 url_deaths="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
@@ -155,5 +135,3 @@ with open('data.json', 'w') as f:
     json.dump(json_data_final, f)
     sys.stdout.flush()
     print("Data Updated !")
-
-git_push()
