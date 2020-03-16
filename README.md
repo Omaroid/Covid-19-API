@@ -6,6 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Omaroid/Covid-19-API)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Omaroid/Covid-19-API)
 ![GitHub issues](https://img.shields.io/github/issues/Omaroid/Covid-19-API)
+[![Coverage Status](https://coveralls.io/repos/github/Omaroid/Covid-19-API/badge.svg?branch=master)](https://coveralls.io/github/Omaroid/Covid-19-API?branch=master)
 
 ## Endpoints
 
