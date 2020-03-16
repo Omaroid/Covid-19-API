@@ -5,7 +5,7 @@ from country_codes import country_code
 import json
 import math
 import sys
-import os
+import os 
 
 url_confirmed="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
 url_deaths="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
@@ -131,7 +131,7 @@ json_data_final['latest']['confirmed'] = tmp_latest_confirmed
 json_data_final['latest']['deaths'] = tmp_latest_deaths
 json_data_final['latest']['recovered'] = tmp_latest_recovered
 
-with open('data.json', 'w') as f:
+with open('data1.json', 'w') as f:
     json.dump(json_data_final, f)
     sys.stdout.flush()
     print("Data Updated !")
