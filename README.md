@@ -85,7 +85,7 @@ You will need the following things properly installed on your computer.
 * `git commit -am "first commit"`
 * `git push heroku master`
 
-### Deploying
+### Testing
 
 * Visit your application webpage
 * `https://<AppName>.herokuapp.com/`
