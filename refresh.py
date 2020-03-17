@@ -42,6 +42,32 @@ def update():
         
         tmp_province = str(row['Province/State'])
         tmp_country_name = row['Country/Region']
+
+        if(tmp_country_name == 'Brunei'):
+            tmp_country_name = 'Brunei Darussalam'
+        elif(tmp_country_name == 'Taiwan*'):
+            tmp_country_name = 'Taiwan, Province of China'
+        elif(tmp_country_name == 'Moldova'):
+            tmp_country_name = 'Moldova, Republic of'
+        elif(tmp_country_name == 'Venezuala'):
+            tmp_country_name = 'Venezuela, Bolivarian Republic of'
+        elif(tmp_country_name == 'Bolivia'):
+            tmp_country_name = 'Bolivia, Plurinational State of'
+        elif(tmp_country_name == 'The Bahamas'):
+            tmp_country_name = 'Bahamas'
+        elif(tmp_country_name == 'Congo (Kinshasa)' or tmp_country_name == 'Congo (Brazzaville)' ):
+            tmp_country_name = 'Congo'
+        elif(tmp_country_name == 'Tanzania'):
+            tmp_country_name = 'Tanzania, United Republic of'
+        elif(tmp_country_name == 'Republic of the Congo'):
+            tmp_country_name = 'Congo, the Democratic Republic of the'
+        elif(tmp_country_name == "Cote d'Ivoire"):
+            tmp_country_name = "Côte d'Ivoire"
+        elif(tmp_country_name == "Holy See"):
+            tmp_country_name = "Holy See (Vatican City State)"
+        elif(tmp_country_name == "occupied Palestinian territory"):
+            tmp_country_name = "Palestine, State of"
+
         tmp_country_code = country_code(row['Country/Region'])
         tmp_country_latest = row[-1]
 
@@ -73,6 +99,32 @@ def update():
         
         tmp_province = str(row['Province/State'])
         tmp_country_name = row['Country/Region']
+
+        if(tmp_country_name == 'Brunei'):
+            tmp_country_name = 'Brunei Darussalam'
+        elif(tmp_country_name == 'Taiwan*'):
+            tmp_country_name = 'Taiwan, Province of China'
+        elif(tmp_country_name == 'Moldova'):
+            tmp_country_name = 'Moldova, Republic of'
+        elif(tmp_country_name == 'Venezuala'):
+            tmp_country_name = 'Venezuela, Bolivarian Republic of'
+        elif(tmp_country_name == 'Bolivia'):
+            tmp_country_name = 'Bolivia, Plurinational State of'
+        elif(tmp_country_name == 'The Bahamas'):
+            tmp_country_name = 'Bahamas'
+        elif(tmp_country_name == 'Congo (Kinshasa)' or tmp_country_name == 'Congo (Brazzaville)' ):
+            tmp_country_name = 'Congo'
+        elif(tmp_country_name == 'Tanzania'):
+            tmp_country_name = 'Tanzania, United Republic of'
+        elif(tmp_country_name == 'Republic of the Congo'):
+            tmp_country_name = 'Congo, the Democratic Republic of the'
+        elif(tmp_country_name == "Cote d'Ivoire"):
+            tmp_country_name = "Côte d'Ivoire"
+        elif(tmp_country_name == "Holy See"):
+            tmp_country_name = "Holy See (Vatican City State)"
+        elif(tmp_country_name == "occupied Palestinian territory"):
+            tmp_country_name = "Palestine, State of"
+
         tmp_country_code = country_code(row['Country/Region'])
         tmp_country_latest = row[-1]
 
@@ -104,6 +156,32 @@ def update():
         
         tmp_province = str(row['Province/State'])
         tmp_country_name = row['Country/Region']
+
+        if(tmp_country_name == 'Brunei'):
+            tmp_country_name = 'Brunei Darussalam'
+        elif(tmp_country_name == 'Taiwan*'):
+            tmp_country_name = 'Taiwan, Province of China'
+        elif(tmp_country_name == 'Moldova'):
+            tmp_country_name = 'Moldova, Republic of'
+        elif(tmp_country_name == 'Venezuala'):
+            tmp_country_name = 'Venezuela, Bolivarian Republic of'
+        elif(tmp_country_name == 'Bolivia'):
+            tmp_country_name = 'Bolivia, Plurinational State of'
+        elif(tmp_country_name == 'The Bahamas'):
+            tmp_country_name = 'Bahamas'
+        elif(tmp_country_name == 'Congo (Kinshasa)' or tmp_country_name == 'Congo (Brazzaville)' ):
+            tmp_country_name = 'Congo'
+        elif(tmp_country_name == 'Tanzania'):
+            tmp_country_name = 'Tanzania, United Republic of'
+        elif(tmp_country_name == 'Republic of the Congo'):
+            tmp_country_name = 'Congo, the Democratic Republic of the'
+        elif(tmp_country_name == "Cote d'Ivoire"):
+            tmp_country_name = "Côte d'Ivoire"
+        elif(tmp_country_name == "Holy See"):
+            tmp_country_name = "Holy See (Vatican City State)"
+        elif(tmp_country_name == "occupied Palestinian territory"):
+            tmp_country_name = "Palestine, State of"
+
         tmp_country_code = country_code(row['Country/Region'])
         tmp_country_latest = row[-1]
 
