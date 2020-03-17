@@ -67,7 +67,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone https://github.com/Omaroid/Covid-19-API.git`
 * `cd Covid-19-Api`
-* `pip install requirements.txt`
+* `pip install -r requirements.txt`
 
 ## Running / Development
 
