@@ -2,7 +2,20 @@ from flask import Flask, request, jsonify
 import json
 import os
 
+from refresh import update
+from apscheduler.schedulers.background import BackgroundScheduler
+
 app = Flask(__name__)
+
+
+def sensor():
+    update()
+    print("Scheduler is alive!")
+
+sched = BackgroundScheduler(daemon=True)
+sched.add_job(sensor,'interval',minutes=10)
+sched.start()
+
 
 @app.route('/')
 def index():
