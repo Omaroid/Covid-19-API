@@ -121,7 +121,7 @@ is_3166_1 = {
     "Kenya"                                        : "KE",
     "Kiribati"                                     : "KI",
     "Korea, Democratic People's Republic of"       : "KP",
-    "Korea, Republic of"                           : "KR",
+    "Korea, South"                                 : "KR",
     "Kuwait"                                       : "KW",
     "Kyrgyzstan"                                   : "KG",
     "Lao People's Democratic Republic"             : "LA",
