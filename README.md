@@ -1,6 +1,6 @@
 # Coronavirus-Heroku-tracker (API)
 
-> This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈.
+> This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈. I've also programmed a skeduler on the app to refresh the data every 10 minutes.
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Omaroid/Covid-19-API)
@@ -51,9 +51,7 @@ GET /latest
 
 The data comes from the [2019 Novel Coronavirus (nCoV) Data Repository, provided
 by JHU CCSE](https://github.com/CSSEGISandData/2019-nCoV). It is
-programmatically retrieved, re-formatted and stored in the server for one hour.
-
-I've also programmed a skeduler on Heroku to run the refresh script every day since the data there is updated daily.
+programmatically retrieved, re-formatted and stored in the server for every 10 minutes.
 
 ## Prerequisites
 
