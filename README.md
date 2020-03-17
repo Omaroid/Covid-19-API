@@ -1,4 +1,4 @@
-# coronavirus-Heroku-tracker (API)
+# Coronavirus-Heroku-tracker (API)
 
 > This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈.
 
@@ -85,7 +85,7 @@ You will need the following things properly installed on your computer.
 * `git commit -am "first commit"`
 * `git push heroku master`
 
-### Deploying
+### Testing
 
 * Visit your application webpage
 * `https://<AppName>.herokuapp.com/`
