@@ -68,7 +68,7 @@ def update():
         elif(tmp_country_name == "occupied Palestinian territory"):
             tmp_country_name = "Palestine, State of"
 
-        tmp_country_code = country_code(row['Country/Region'])
+        tmp_country_code = country_code(tmp_country_name)
         tmp_country_latest = row[-1]
 
         tmp_country_position = {}
@@ -125,7 +125,7 @@ def update():
         elif(tmp_country_name == "occupied Palestinian territory"):
             tmp_country_name = "Palestine, State of"
 
-        tmp_country_code = country_code(row['Country/Region'])
+        tmp_country_code = country_code(tmp_country_name)
         tmp_country_latest = row[-1]
 
         tmp_country_position = {}
@@ -182,7 +182,7 @@ def update():
         elif(tmp_country_name == "occupied Palestinian territory"):
             tmp_country_name = "Palestine, State of"
 
-        tmp_country_code = country_code(row['Country/Region'])
+        tmp_country_code = country_code(tmp_country_name)
         tmp_country_latest = row[-1]
 
         tmp_country_position = {}
