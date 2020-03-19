@@ -1,4 +1,4 @@
-# Coronavirus-Heroku-tracker (API)
+# Coronavirus-Heroku-tracker (API) Version 1.1
 
 > This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈. I've also programmed a skeduler on the app to refresh the data every 10 minutes.
 
@@ -45,6 +45,16 @@ Getting just latest data:
 
 ```http
 GET /latest
+```
+
+Getting one country data:
+
+```http
+GET /country?countryCode=<CountryCode>
+```
+```json
+{ "country": { "name": ..., "position": { "latitude": ..., "longitude": ... } }, "confirmed": { "latest": ..., "history": ... } 
+, "deaths": { "latest": ..., "history": ... }, "recovered": { "latest": ..., "history": ... } }
 ```
 
 ## Data
