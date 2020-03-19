@@ -7,7 +7,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
-
 def sensor():
     update()
     print("Scheduler is alive!")
@@ -46,6 +45,19 @@ def latest():
     with open('data.json') as f:
         d = json.load(f)
     return d['latest']
+
+@app.route('/country')
+def getCountryData():
+    countryCode = request.args.get('countryCode')
+    print("----",countryCode)
+    with open('dataCountry.json') as f:
+        d = json.load(f)
+    if(countryCode in d):
+        return d[countryCode]
+    elif(countryCode == None):
+        return '{}'
+    else:
+        return d
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support

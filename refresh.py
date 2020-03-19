@@ -23,7 +23,8 @@ def update():
     df_recovered=pd.read_csv(io.StringIO(s.decode('utf-8')))
 
     json_data_final = {}
-    json_data_list = []
+    json_data_final_countries = {}
+    #json_data_list = []
 
     json_data_final['confirmed'] = {}
     json_data_final['confirmed']['locations'] = []
@@ -87,6 +88,16 @@ def update():
         tmp_element['province'] = tmp_province
         json_data_final['confirmed']['locations'].append(tmp_element)
 
+        ############
+        json_data_final_countries[tmp_country_code] = {}
+        json_data_final_countries[tmp_country_code]['country'] = {}
+        json_data_final_countries[tmp_country_code]['country']['name'] = tmp_country_name
+        json_data_final_countries[tmp_country_code]['country']['position'] = tmp_country_position
+        json_data_final_countries[tmp_country_code]['confirmed'] = {}
+        json_data_final_countries[tmp_country_code]['confirmed']['history'] = tmp_country_history
+        json_data_final_countries[tmp_country_code]['confirmed']['latest'] = tmp_country_latest
+        ############
+
     json_data_final['confirmed']['latest'] = tmp_latest_confirmed
 
     # Deaths
@@ -143,6 +154,13 @@ def update():
         tmp_element['latest'] = tmp_country_latest
         tmp_element['province'] = tmp_province
         json_data_final['deaths']['locations'].append(tmp_element)
+
+        ############
+        json_data_final_countries[tmp_country_code]['deaths'] = {}
+        json_data_final_countries[tmp_country_code]['deaths']['history'] = tmp_country_history
+        json_data_final_countries[tmp_country_code]['deaths']['latest'] = tmp_country_latest
+        ############
+
 
     json_data_final['deaths']['latest'] = tmp_latest_deaths
 
@@ -201,6 +219,12 @@ def update():
         tmp_element['province'] = tmp_province
         json_data_final['recovered']['locations'].append(tmp_element)
 
+        ############
+        json_data_final_countries[tmp_country_code]['recovered'] = {}
+        json_data_final_countries[tmp_country_code]['recovered']['history'] = tmp_country_history
+        json_data_final_countries[tmp_country_code]['recovered']['latest'] = tmp_country_latest
+        ############
+
     json_data_final['recovered']['latest'] = tmp_latest_recovered
 
     # Latest
@@ -213,6 +237,11 @@ def update():
 
     with open('data.json', 'w') as f:
         json.dump(json_data_final, f)
+        sys.stdout.flush()
+        print("Data Updated !")
+
+    with open('dataCountry.json', 'w') as f:
+        json.dump(json_data_final_countries, f)
         sys.stdout.flush()
         print("Data Updated !")
     
