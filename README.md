@@ -47,15 +47,15 @@ Getting just latest data:
 GET /latest
 ```
 
-Getting one country data:
+[//]: <> (Getting one country data:)
 
-```http
-GET /country?countryCode=<CountryCode>
-```
-```json
-{ "country": { "name": ..., "position": { "latitude": ..., "longitude": ... } }, "confirmed": { "latest": ..., "history": ... } 
-, "deaths": { "latest": ..., "history": ... }, "recovered": { "latest": ..., "history": ... } }
-```
+[//]: <> (```http)
+[//]: <> (GET /country?countryCode=<CountryCode>)
+[//]: <> (```)
+[//]: <> (```json)
+[//]: <> ({ "country": { "name": ..., "position": { "latitude": ..., "longitude": ... } }, "confirmed": { "latest": ..., )[//]: <> ("history": ... } )
+[//]: <> (, "deaths": { "latest": ..., "history": ... }, "recovered": { "latest": ..., "history": ... } })
+[//]: <> (```))
 
 ## Data
 
