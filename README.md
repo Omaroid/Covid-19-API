@@ -5,7 +5,6 @@
 [2019 Novel Coronavirus (nCoV) Data Repository, provided
 by JHU CCSE](https://github.com/CSSEGISandData/2019-nCoV) removed the support of recovered cases. The /recovered endpoint was removed !
 
-:warning:
 
 > This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈. I've also programmed a skeduler on the app to refresh the data every 10 minutes.
 
