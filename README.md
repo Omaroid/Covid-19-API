@@ -23,7 +23,7 @@ Getting confirmed cases, deaths, and recoveries:
 GET /
 ```
 ```json
-{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... }, "recovered": { ... } }
+{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... } }
 ```
 
 Getting just confirmed:
