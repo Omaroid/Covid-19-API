@@ -1,4 +1,11 @@
-# Coronavirus-Heroku-tracker (API) Version 1.1
+# Coronavirus-Heroku-tracker (API) Version 0.1.1
+
+## :warning: Remove Recovered Cases :warning:
+
+[2019 Novel Coronavirus (nCoV) Data Repository, provided
+by JHU CCSE](https://github.com/CSSEGISandData/2019-nCoV) removed the support of recovered cases. The /recovered endpoint was removed !
+
+:warning:
 
 > This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈. I've also programmed a skeduler on the app to refresh the data every 10 minutes.
 
@@ -26,7 +33,7 @@ Getting just confirmed:
 GET /confirmed
 ```
 ```json
-{ "latest": 42767, "locations": [ ... ] }
+{ "latest": 418678, "locations": [ ... ] }
 ```
 
 Getting just deaths:
@@ -34,11 +41,8 @@ Getting just deaths:
 ```http
 GET /deaths
 ```
-
-Getting just recoveries:
-
-```http
-GET /recovered
+```json
+{ "latest": 18625, "locations": [ ... ] }
 ```
 
 Getting just latest data:
@@ -46,15 +50,8 @@ Getting just latest data:
 ```http
 GET /latest
 ```
-
-Getting one country data:
-
-```http
-GET /country?countryCode=<CountryCode>
-```
 ```json
-{ "country": { "name": ..., "position": { "latitude": ..., "longitude": ... } }, "confirmed": { "latest": ..., "history": ... } 
-, "deaths": { "latest": ..., "history": ... }, "recovered": { "latest": ..., "history": ... } }
+{ "confirmed": 418678, "deaths": 18625 }
 ```
 
 ## Data
