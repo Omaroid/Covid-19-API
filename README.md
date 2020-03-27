@@ -13,7 +13,7 @@ Getting confirmed cases, deaths, and recoveries:
 GET /
 ```
 ```json
-{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... }, "recovered": { ... } }
+{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... }, "recovered": { ... }, "updatedAt": "2020-03-27 12:00:12.067975" }
 ```
 
 Getting just confirmed:
@@ -58,7 +58,7 @@ Getting update UTC datetime:
 GET /updatedAt
 ```
 ```json
-2020-03-27 12:00:12.067975
+"2020-03-27 12:00:12.067975"
 ```
 
 ## Data
