@@ -52,7 +52,7 @@ GET /latest
 { "confirmed": 418678, "deaths": 18625, "recovered": 35000}
 ```
 
-Getting update datetime:
+Getting update UTC datetime:
 
 ```http
 GET /updatedAt
