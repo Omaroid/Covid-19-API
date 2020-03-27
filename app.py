@@ -5,6 +5,9 @@ import os
 from refresh import update
 from apscheduler.schedulers.background import BackgroundScheduler
 
+port_ = 5000
+interval_minutes = 10
+
 app = Flask(__name__)
 
 def sensor():
@@ -12,9 +15,8 @@ def sensor():
     print("Scheduler is alive!")
 
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(sensor,'interval',minutes=10)
+sched.add_job(sensor,'interval',minutes=interval_minutes)
 sched.start()
-
 
 @app.route('/')
 def index():
@@ -34,11 +36,11 @@ def deaths():
         d = json.load(f)
     return d['deaths']
 
-# @app.route('/recovered')
-# def recovered():
-#     with open('data.json') as f:
-#         d = json.load(f)
-#     return d['recovered']
+@app.route('/recovered')
+def recovered():
+    with open('data.json') as f:
+        d = json.load(f)
+    return d['recovered']
 
 @app.route('/latest')
 def latest():
@@ -46,6 +48,12 @@ def latest():
         d = json.load(f)
     return d['latest']
 
+@app.route('/updatedAt')
+def updatedAt():
+    with open('data.json') as f:
+        d = json.load(f)
+    return d['updatedAt']
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=port_)

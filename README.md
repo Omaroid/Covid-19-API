@@ -1,17 +1,13 @@
-# Coronavirus-Heroku-tracker (API) Version 0.1.1
+---
+noteId: "c3908d00702611ea83c605f6e1f11528"
+tags: []
 
-## :warning: Remove Recovered Cases :warning:
+---
 
-[2019 Novel Coronavirus (nCoV) Data Repository, provided
-by JHU CCSE](https://github.com/CSSEGISandData/2019-nCoV) removed the support of recovered cases. The /recovered endpoint was removed !
+# COVID-19 API
 
 
 > This is a fast (< 200ms) and basic API for tracking development of the new coronavirus (2019-nCoV). It's written in Python using 🍼 Flask and also contains historical data 📈. I've also programmed a skeduler on the app to refresh the data every 10 minutes.
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-![GitHub last commit](https://img.shields.io/github/last-commit/Omaroid/Covid-19-API)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Omaroid/Covid-19-API)
-![GitHub issues](https://img.shields.io/github/issues/Omaroid/Covid-19-API)
 
 ## Endpoints
 
@@ -23,7 +19,7 @@ Getting confirmed cases, deaths, and recoveries:
 GET /
 ```
 ```json
-{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... } }
+{ "latest": { ... }, "confirmed": { ... }, "deaths": { ... }, "recovered": { ... } }
 ```
 
 Getting just confirmed:
@@ -44,13 +40,31 @@ GET /deaths
 { "latest": 18625, "locations": [ ... ] }
 ```
 
+Getting just recovered:
+
+```http
+GET /recovered
+```
+```json
+{ "latest": 35000, "locations": [ ... ] }
+```
+
 Getting just latest data:
 
 ```http
 GET /latest
 ```
 ```json
-{ "confirmed": 418678, "deaths": 18625 }
+{ "confirmed": 418678, "deaths": 18625, "recovered": 35000}
+```
+
+Getting update datetime:
+
+```http
+GET /updatedAt
+```
+```json
+2020-03-27 12:00:12.067975
 ```
 
 ## Data
@@ -69,8 +83,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/Omaroid/Covid-19-API.git`
-* `cd Covid-19-Api`
+* `git clone https://github.com/INGENIANCE/COVID-19-API`
+* `cd COVID-19-API`
 * `pip install -r requirements.txt`
 
 ## Running / Development
