@@ -1,3 +1,5 @@
+# refresh.py
+
 import pandas as pd
 import io
 import requests
@@ -17,7 +19,7 @@ def populate(json, df, dftype):
     json[dftype] = {}
     json[dftype]['locations'] = []
     
-    tmp_latest_confirmed = int(df.sum(axis=0)[-1])
+    tmp_latest = int(df.sum(axis=0)[-1])
 
     for index, row in df.iterrows():
 
@@ -44,9 +46,10 @@ def populate(json, df, dftype):
         tmp_element['history'] = tmp_country_history
         tmp_element['latest'] = tmp_country_latest
         tmp_element['province'] = tmp_province
+
         json[dftype]['locations'].append(tmp_element)
 
-    json[dftype]['latest'] = tmp_latest_confirmed
+    json[dftype]['latest'] = tmp_latest
 
     return json
 
