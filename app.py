@@ -14,6 +14,8 @@ interval_minutes = 10
 
 app = Flask(__name__)
 
+CORS(app)
+
 def sensor():
     update()
     print("Scheduler is alive!")
