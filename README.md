@@ -77,8 +77,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/INGENIANCE/COVID-19-API`
-* `cd COVID-19-API`
+* `git clone https://github.com/Omaroid/Covid-19-API`
+* `cd Covid-19-API`
 * `pip install -r requirements.txt`
 
 ## Running / Development
