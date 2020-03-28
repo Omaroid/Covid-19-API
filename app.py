@@ -1,6 +1,8 @@
 # app.py
 
 from flask import Flask, request
+from flask_cors import CORS
+
 import json
 import os
 
@@ -11,6 +13,8 @@ port_ = 5000
 interval_minutes = 10
 
 app = Flask(__name__)
+
+CORS(app)
 
 def sensor():
     update()
