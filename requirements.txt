@@ -4,7 +4,7 @@ pandas==0.24.2
 gunicorn==19.9.0
 Click==7.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==0.15.6
 APScheduler==3.3.1
